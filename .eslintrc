@@ -1,0 +1,30 @@
+{
+  "root": true,
+  "extends": [
+    "airbnb-base",
+    "prettier"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "parser": "@babel/eslint-parser",
+  "rules": {
+    "prettier/prettier": "error",
+
+    "no-console": "off"
+  },
+  "overrides": [
+    {
+      "files": [
+        "./src/**/*.test.js"
+      ],
+      "env": {
+        "jest": true
+      },
+      "extends": [
+        "plugin:jest/recommended",
+        "plugin:jest/style"
+      ]
+    }
+  ]
+}
