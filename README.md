@@ -12,6 +12,9 @@ $ yarn test
 ## Algorithms
 
 * **Sorting**
-  * [Bubble Sort](src/algorithms/sorting/bubble-sort/README.md)
-  * [Selection Sort](src/algorithms/sorting/selection-sort/README.md)
-  * [Insertion Sort](src/algorithms/sorting/insertion-sort/README.md)
+  * [Bubble Sort](src/algorithms/sorting/bubble-sort)
+  * [Selection Sort](src/algorithms/sorting/selection-sort)
+  * [Insertion Sort](src/algorithms/sorting/insertion-sort)
+
+* **Uncategorized**
+  * [LRU Cache](src/algorithms/uncategorized/lru-cache) 
