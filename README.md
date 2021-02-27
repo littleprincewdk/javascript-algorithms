@@ -6,3 +6,10 @@
 $ yarn
 $ yarn test
 ```
+
+## Data Structures
+
+## Algorithms
+
+* **Sorting**
+  * [Bubble Sort](src/algorithms/sorting/bubble-sort/README.md)
