@@ -13,3 +13,4 @@ $ yarn test
 
 * **Sorting**
   * [Bubble Sort](src/algorithms/sorting/bubble-sort/README.md)
+  * [Selection Sort](src/algorithms/sorting/selection-sort/README.md)
