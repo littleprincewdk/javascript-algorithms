@@ -18,3 +18,9 @@ $ yarn test
 
 * **Uncategorized**
   * [LRU Cache](src/algorithms/uncategorized/lru-cache) 
+
+## Javascript Implementation
+
+* [apply](src/javascript-implementation/apply)
+* [call](src/javascript-implementation/call)
+* [bind](src/javascript-implementation/bind)
