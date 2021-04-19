@@ -17,6 +17,8 @@ $ yarn test
   * [Insertion Sort](src/algorithms/sorting/insertion-sort)
 
 * **Uncategorized**
+  * [Factorial](src/algorithms/math/factorial)
+  * [Fibonacci](src/algorithms/math/fibonacci)
   * [LRU Cache](src/algorithms/uncategorized/lru-cache) 
 
 ## Javascript Implementation
