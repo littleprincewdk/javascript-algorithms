@@ -24,3 +24,5 @@ $ yarn test
 * [apply](src/javascript-implementation/apply)
 * [call](src/javascript-implementation/call)
 * [bind](src/javascript-implementation/bind)
+* [debounce](src/javascript-implementation/debounce)
+* [throttle](src/javascript-implementation/throttle)
