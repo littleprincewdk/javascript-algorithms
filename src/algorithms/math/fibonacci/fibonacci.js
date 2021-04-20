@@ -15,6 +15,22 @@ export function fibonacci(n) {
 }
 
 /**
+ * 递归方式计算斐波那契数列
+ * @param {*} n
+ */
+export function fibonacciRecursive(n, current = 0, next = 1) {
+  if (n === 0) {
+    return 0;
+  }
+
+  if (n === 1) {
+    return next;
+  }
+
+  return fibonacciRecursive(n - 1, next, current + next); // 尾调用优化
+}
+
+/**
  * [比内公式计算斐波那契数列](https://github.com/trekhleb/javascript-algorithms/blob/master/src/algorithms/math/fibonacci/fibonacciNthClosedForm.js)
  *
  * @param {*} n

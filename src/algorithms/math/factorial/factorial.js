@@ -21,7 +21,5 @@ export function factorialRecursive(n, p = 1) {
     return 1 * p;
   }
 
-  const result = n * p;
-
-  return factorialRecursive(n - 1, result); // 尾调用优化
+  return factorialRecursive(n - 1, n * p); // 尾调用优化
 }
