@@ -11,20 +11,22 @@ $ yarn test
 
 ## Algorithms
 
-* **Sorting**
-  * [Bubble Sort](src/algorithms/sorting/bubble-sort)
-  * [Selection Sort](src/algorithms/sorting/selection-sort)
-  * [Insertion Sort](src/algorithms/sorting/insertion-sort)
+- **Sorting**
 
-* **Uncategorized**
-  * [Factorial](src/algorithms/math/factorial)
-  * [Fibonacci](src/algorithms/math/fibonacci)
-  * [LRU Cache](src/algorithms/uncategorized/lru-cache) 
+  - [Bubble Sort](src/algorithms/sorting/bubble-sort)
+  - [Selection Sort](src/algorithms/sorting/selection-sort)
+  - [Insertion Sort](src/algorithms/sorting/insertion-sort)
+
+- **Uncategorized**
+  - [Factorial](src/algorithms/math/factorial)
+  - [Fibonacci](src/algorithms/math/fibonacci)
+  - [LRU Cache](src/algorithms/uncategorized/lru-cache)
 
 ## Javascript Implementation
 
-* [apply](src/javascript-implementation/apply)
-* [call](src/javascript-implementation/call)
-* [bind](src/javascript-implementation/bind)
-* [debounce](src/javascript-implementation/debounce)
-* [throttle](src/javascript-implementation/throttle)
+- [new](src/javascript-implementation/new)
+- [apply](src/javascript-implementation/apply)
+- [call](src/javascript-implementation/call)
+- [bind](src/javascript-implementation/bind)
+- [debounce](src/javascript-implementation/debounce)
+- [throttle](src/javascript-implementation/throttle)
