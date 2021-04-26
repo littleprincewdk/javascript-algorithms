@@ -31,6 +31,14 @@ export default class Stack {
   }
 
   /**
+   * 获取栈元素个数
+   * @returns {number}
+   */
+  size() {
+    return this.stack.length;
+  }
+
+  /**
    * 判断栈是否为空
    * @returns {boolean}
    */
