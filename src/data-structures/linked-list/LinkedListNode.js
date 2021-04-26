@@ -2,8 +2,12 @@
  * 链表节点
  */
 export default class LinkedListNode {
-  constructor(value) {
+  constructor(value, next = null) {
     this.value = value;
-    this.next = null;
+    this.next = next;
+  }
+
+  toString() {
+    return String(this.value);
   }
 }
