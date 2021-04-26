@@ -1,7 +1,7 @@
 import { factorial, factorialRecursive } from './factorial';
 
 describe('factorial', () => {
-  test('loop implementation', () => {
+  test('iterate implementation', () => {
     expect(factorial(0)).toEqual(1);
     expect(factorial(1)).toEqual(1);
     expect(factorial(5)).toEqual(120);
