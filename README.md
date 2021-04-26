@@ -9,6 +9,8 @@ $ yarn test
 
 ## Data Structures
 
+- [Linked List](src/data-structures/linked-list)
+
 ## Algorithms
 
 - **Sorting**
@@ -18,6 +20,7 @@ $ yarn test
   - [Insertion Sort](src/algorithms/sorting/insertion-sort)
 
 - **Uncategorized**
+
   - [Factorial](src/algorithms/math/factorial)
   - [Fibonacci](src/algorithms/math/fibonacci)
   - [LRU Cache](src/algorithms/uncategorized/lru-cache)
