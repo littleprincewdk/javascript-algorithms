@@ -1,7 +1,7 @@
 import { fibonacci, fibonacciRecursive, fibonacciClosedForm } from './fibonacci';
 
 describe('fibonacci', () => {
-  test('loop implementation', () => {
+  test('iterate implementation', () => {
     expect(fibonacci(1)).toBe(1);
     expect(fibonacci(2)).toBe(1);
     expect(fibonacci(3)).toBe(2);
