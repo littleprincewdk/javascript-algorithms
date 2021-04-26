@@ -7,6 +7,7 @@ export default class LinkedList {
   constructor() {
     this.head = null;
     this.tail = null;
+    this._size = 0;
   }
 
   /**
@@ -21,6 +22,8 @@ export default class LinkedList {
     if (!this.tail) {
       this.tail = newHead;
     }
+
+    this._size += 1;
 
     return this;
   }
@@ -38,6 +41,8 @@ export default class LinkedList {
       this.tail.next = newTail;
       this.tail = newTail;
     }
+
+    this._size += 1;
 
     return this;
   }
@@ -58,6 +63,7 @@ export default class LinkedList {
     while (current.next !== null) {
       if (current.next.value === value) {
         current.next = current.next.next;
+        this._size -= 1;
       } else {
         current = current.next;
       }
@@ -119,6 +125,14 @@ export default class LinkedList {
     }
 
     return null;
+  }
+
+  /**
+   * 获取链表元素个数
+   * @returns {number}
+   */
+  size() {
+    return this._size;
   }
 
   /**
