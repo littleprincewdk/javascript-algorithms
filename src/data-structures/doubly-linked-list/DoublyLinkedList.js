@@ -1,9 +1,9 @@
-import LinkedListNode from './LinkedListNode';
+import DoublyLinkedListNode from './DoublyLinkedListNode';
 
 /**
- * 链表
+ * 双向链表
  */
-export default class LinkedList {
+export default class DoublyLinkedList {
   constructor() {
     this.head = null;
     this.tail = null;
@@ -13,15 +13,17 @@ export default class LinkedList {
   /**
    * 插入值到前头
    * @param {*} value
-   * @returns {LinkedList}
+   * @returns {DoublyLinkedList}
    */
   prepend(value) {
-    const newHead = new LinkedListNode(value, this.head);
-    this.head = newHead;
-
+    const newHead = new DoublyLinkedListNode(value, this.head);
+    if (this.head) {
+      this.head.prev = newHead;
+    }
     if (!this.tail) {
       this.tail = newHead;
     }
+    this.head = newHead;
 
     this._size += 1;
 
@@ -31,15 +33,16 @@ export default class LinkedList {
   /**
    * 插入值到后头
    * @param {*} value
-   * @returns {LinkedList}
+   * @returns {DoublyLinkedList}
    */
   append(value) {
-    const newTail = new LinkedListNode(value);
+    const newTail = new DoublyLinkedListNode(value);
     if (!this.tail) {
       this.head = newTail;
       this.tail = newTail;
     } else {
       this.tail.next = newTail;
+      newTail.prev = this.tail;
       this.tail = newTail;
     }
 
@@ -51,18 +54,21 @@ export default class LinkedList {
   /**
    * 删除所有值为`value`的节点
    * @param {*} value
-   * @returns {LinkedList}
+   * @returns {DoublyLinkedList}
    */
   delete(value) {
     if (!this.head) {
       return this;
     }
 
-    const virtualHead = new LinkedListNode(0, this.head);
+    const virtualHead = new DoublyLinkedListNode(value, this.head);
     let current = virtualHead;
 
     while (current.next !== null) {
       if (current.next.value === value) {
+        if (current.next.next !== null) {
+          current.next.next.prev = current;
+        }
         current.next = current.next.next;
         this._size -= 1;
       } else {
@@ -84,7 +90,7 @@ export default class LinkedList {
    * 迭代器
    * @returns {iterator}
    */
-  [Symbol.iterator] = function iterator() {
+  [Symbol.iterator]() {
     let current = this.head;
 
     return {
@@ -95,6 +101,7 @@ export default class LinkedList {
             done: true,
           };
         }
+
         const result = {
           value: current.value,
           done: false,
@@ -104,13 +111,13 @@ export default class LinkedList {
         return result;
       },
     };
-  };
+  }
 
   /**
    * 搜索值为`value`的节点
    * @param {*} value
    * @param {*} callback
-   * @returns {LinkedListNode}
+   * @returns {DoublyLinkedListNode}
    */
   find(value) {
     let current = this.head;
@@ -135,7 +142,7 @@ export default class LinkedList {
   /**
    * 从指定数组构造链表
    * @param {*} values
-   * @returns {LinkedList}
+   * @returns {DoublyLinkedList}
    */
   fromArray(values) {
     values.forEach((value) => this.append(value));
@@ -145,7 +152,7 @@ export default class LinkedList {
 
   /**
    * 转化为数组
-   * @returns {LinkedListNode[]}
+   * @returns {DoublyLinkedListNode[]}
    */
   toArray() {
     const array = [];
@@ -169,21 +176,20 @@ export default class LinkedList {
 
   /**
    * 反转链表
-   * @returns {LinkedList}
+   * @returns {DoublyLinkedList}
    */
   reverse() {
-    let prev = null;
     let current = this.head;
 
     while (current !== null) {
       const { next } = current;
-      current.next = prev;
-      prev = current;
+      current.next = current.prev;
+      current.prev = next;
+
       current = next;
     }
 
-    this.tail = this.head;
-    this.head = prev;
+    [this.head, this.tail] = [this.tail, this.head];
 
     return this;
   }
