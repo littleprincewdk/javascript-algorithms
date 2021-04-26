@@ -22,6 +22,10 @@ $ yarn test
   - [Selection Sort](src/algorithms/sorting/selection-sort)
   - [Insertion Sort](src/algorithms/sorting/insertion-sort)
 
+- **Tree**
+
+  - [Binary Tree](src/algorithms/tree/binary-tree)
+
 - **Uncategorized**
 
   - [Factorial](src/algorithms/math/factorial)
