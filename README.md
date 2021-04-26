@@ -10,6 +10,7 @@ $ yarn test
 ## Data Structures
 
 - [Stack](src/data-structures/stack)
+- [Queue](src/data-structures/queue)
 - [Linked List](src/data-structures/linked-list)
 
 ## Algorithms
