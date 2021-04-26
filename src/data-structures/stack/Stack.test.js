@@ -28,6 +28,27 @@ describe('Stack', () => {
     expect(stack.peek()).toBe(2);
   });
 
+  test('should get element count', () => {
+    const stack = new Stack();
+
+    expect(stack.size()).toBe(0);
+
+    stack.push(1);
+    expect(stack.size()).toBe(1);
+
+    stack.push(2);
+    expect(stack.size()).toBe(2);
+
+    stack.pop();
+    expect(stack.size()).toBe(1);
+
+    stack.pop();
+    expect(stack.size()).toBe(0);
+
+    stack.pop();
+    expect(stack.size()).toBe(0);
+  });
+
   test('should check if stack is empty', () => {
     const stack = new Stack();
 

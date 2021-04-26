@@ -74,6 +74,36 @@ describe('LinkedList', () => {
     expect(linkedList.toString()).toBe('');
   });
 
+  test('should get element count', () => {
+    const linkedList = new LinkedList();
+
+    expect(linkedList.size()).toBe(0);
+
+    linkedList.append(1);
+    expect(linkedList.size()).toBe(1);
+
+    linkedList.prepend(2);
+    expect(linkedList.size()).toBe(2);
+
+    linkedList.append(3);
+    linkedList.append(3);
+    linkedList.append(4);
+    expect(linkedList.size()).toBe(5);
+
+    linkedList.delete(1);
+    expect(linkedList.size()).toBe(4);
+
+    linkedList.delete(3);
+    expect(linkedList.size()).toBe(2);
+
+    linkedList.delete(2);
+    linkedList.delete(4);
+    expect(linkedList.size()).toBe(0);
+
+    linkedList.delete(1);
+    expect(linkedList.size()).toBe(0);
+  });
+
   test('should iterator work', () => {
     const linkedList = new LinkedList();
 
