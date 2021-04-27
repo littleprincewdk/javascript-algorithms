@@ -20,3 +20,4 @@ binaryTree.right.right = new BinaryTreeNode(6);
 binaryTree.preorder = [1, 2, 4, 5, 3, 6];
 binaryTree.inorder = [4, 2, 5, 1, 3, 6];
 binaryTree.postorder = [4, 5, 2, 6, 3, 1];
+binaryTree.bfs = [1, 2, 3, 4, 5, 6];
