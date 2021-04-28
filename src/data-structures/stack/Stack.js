@@ -3,7 +3,7 @@
  */
 export default class Stack {
   constructor() {
-    this.stack = [];
+    this._elements = [];
   }
 
   /**
@@ -11,7 +11,9 @@ export default class Stack {
    * @param {*} value
    */
   push(value) {
-    this.stack.push(value);
+    this._elements.push(value);
+
+    return this;
   }
 
   /**
@@ -19,7 +21,11 @@ export default class Stack {
    * @returns {*}
    */
   pop() {
-    return this.stack.pop();
+    if (this.isEmpty()) {
+      return null;
+    }
+
+    return this._elements.pop();
   }
 
   /**
@@ -27,7 +33,11 @@ export default class Stack {
    * @returns {*}
    */
   peek() {
-    return this.stack[this.stack.length - 1];
+    if (this.isEmpty()) {
+      return null;
+    }
+
+    return this._elements[this._elements.length - 1];
   }
 
   /**
@@ -35,7 +45,7 @@ export default class Stack {
    * @returns {number}
    */
   size() {
-    return this.stack.length;
+    return this._elements.length;
   }
 
   /**
@@ -43,7 +53,7 @@ export default class Stack {
    * @returns {boolean}
    */
   isEmpty() {
-    return this.stack.length === 0;
+    return this._elements.length === 0;
   }
 
   /**
@@ -51,7 +61,7 @@ export default class Stack {
    * @returns {[]}
    */
   toArray() {
-    return [...this.stack].reverse();
+    return [...this._elements].reverse();
   }
 
   /**
@@ -59,6 +69,6 @@ export default class Stack {
    * @returns {string}
    */
   toString() {
-    return [...this.stack].reverse().toString();
+    return [...this._elements].reverse().toString();
   }
 }

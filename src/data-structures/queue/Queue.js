@@ -3,7 +3,7 @@
  */
 export default class Queue {
   constructor() {
-    this.queue = [];
+    this._elements = [];
   }
 
   /**
@@ -11,7 +11,7 @@ export default class Queue {
    * @param {*} value
    */
   enqueue(value) {
-    this.queue.push(value);
+    return this._elements.push(value);
   }
 
   /**
@@ -19,7 +19,11 @@ export default class Queue {
    * @returns {*}
    */
   dequeue() {
-    return this.queue.shift();
+    if (this.isEmpty()) {
+      return null;
+    }
+
+    return this._elements.shift();
   }
 
   /**
@@ -27,7 +31,11 @@ export default class Queue {
    * @returns {*}
    */
   peek() {
-    return this.queue[0];
+    if (this.isEmpty()) {
+      return null;
+    }
+
+    return this._elements[0];
   }
 
   /**
@@ -35,7 +43,7 @@ export default class Queue {
    * @returns {number}
    */
   size() {
-    return this.queue.length;
+    return this._elements.length;
   }
 
   /**
@@ -43,7 +51,7 @@ export default class Queue {
    * @returns {boolean}
    */
   isEmpty() {
-    return this.queue.length === 0;
+    return this._elements.length === 0;
   }
 
   /**
@@ -51,7 +59,7 @@ export default class Queue {
    * @returns {[]}
    */
   toArray() {
-    return this.queue;
+    return this._elements;
   }
 
   /**
@@ -59,6 +67,6 @@ export default class Queue {
    * @returns {string}
    */
   toString() {
-    return this.queue.toString();
+    return this._elements.toString();
   }
 }
