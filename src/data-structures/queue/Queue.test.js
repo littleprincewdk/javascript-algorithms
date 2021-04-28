@@ -54,7 +54,7 @@ describe('Queue', () => {
   test('should peek data from queue', () => {
     const queue = new Queue();
 
-    expect(queue.peek()).toBeUndefined();
+    expect(queue.peek()).toBeNull();
 
     queue.enqueue(1);
     queue.enqueue(2);
@@ -81,7 +81,7 @@ describe('Queue', () => {
 
     expect(queue.dequeue()).toBe(1);
     expect(queue.dequeue()).toBe(2);
-    expect(queue.dequeue()).toBeUndefined();
+    expect(queue.dequeue()).toBeNull();
     expect(queue.isEmpty()).toBe(true);
   });
 });

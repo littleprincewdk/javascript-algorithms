@@ -19,7 +19,7 @@ describe('Stack', () => {
   test('should peek data from stack', () => {
     const stack = new Stack();
 
-    expect(stack.peek()).toBeUndefined();
+    expect(stack.peek()).toBeNull();
 
     stack.push(1);
     stack.push(2);
@@ -67,7 +67,7 @@ describe('Stack', () => {
 
     expect(stack.pop()).toBe(2);
     expect(stack.pop()).toBe(1);
-    expect(stack.pop()).toBeUndefined();
+    expect(stack.pop()).toBeNull();
     expect(stack.isEmpty()).toBe(true);
   });
 
@@ -88,7 +88,7 @@ describe('Stack', () => {
   test('should be possible to convert stack to array', () => {
     const stack = new Stack();
 
-    expect(stack.peek()).toBeUndefined();
+    expect(stack.peek()).toBeNull();
 
     stack.push(1);
     stack.push(2);
