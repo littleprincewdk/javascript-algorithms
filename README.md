@@ -40,3 +40,4 @@ $ yarn test
 - [bind](src/javascript-implementation/bind)
 - [debounce](src/javascript-implementation/debounce)
 - [throttle](src/javascript-implementation/throttle)
+- [curry](src/javascript-implementation/curry)
