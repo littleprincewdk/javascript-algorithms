@@ -1,11 +1,24 @@
 /* eslint-disable no-param-reassign, no-undef */
 
+/**
+ * bind
+ * @param {*} thisArg
+ * @param  {...any} params
+ * @returns {Function}
+ */
 export default function bind(thisArg, ...params) {
-  thisArg = thisArg || global || window;
+  if (thisArg === null || thisArg === undefined) {
+    thisArg = global || window;
+  }
   const fn = this;
   function func(...args) {
+    if (new.target) {
+      return new this(...params, ...args);
+    }
     return fn.apply(thisArg, [...params, ...args]);
   }
-  // func.name = `bound ${fn.name}`;
+  Object.defineProperty(func, 'name', {
+    value: `bound ${fn.name}`,
+  });
   return func;
 }
