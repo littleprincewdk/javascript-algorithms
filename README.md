@@ -43,3 +43,4 @@ $ yarn test
 - [clone](src/javascript-implementation/clone)
 - [curry](src/javascript-implementation/curry)
 - [unique](src/javascript-implementation/unique)
+- [flatten](src/javascript-implementation/flatten)
