@@ -23,6 +23,7 @@ $ yarn test
   - [Insertion Sort](src/algorithms/sorting/insertion-sort)
   - [Merge Sort](src/algorithms/sorting/merge-sort)
   - [Quick Sort](src/algorithms/sorting/quick-sort)
+  - [Counting Sort](src/algorithms/sorting/counting-sort)
 
 - **Tree**
 
