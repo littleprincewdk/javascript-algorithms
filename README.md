@@ -21,6 +21,7 @@ $ yarn test
   - [Bubble Sort](src/algorithms/sorting/bubble-sort)
   - [Selection Sort](src/algorithms/sorting/selection-sort)
   - [Insertion Sort](src/algorithms/sorting/insertion-sort)
+  - [Merge Sort](src/algorithms/sorting/merge-sort)
   - [Quick Sort](src/algorithms/sorting/quick-sort)
 
 - **Tree**
