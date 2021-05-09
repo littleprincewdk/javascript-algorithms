@@ -41,6 +41,7 @@ $ yarn test
 - [apply](src/javascript-implementation/apply)
 - [call](src/javascript-implementation/call)
 - [bind](src/javascript-implementation/bind)
+- [Promise](src/javascript-implementation/Promise)
 - [debounce](src/javascript-implementation/debounce)
 - [throttle](src/javascript-implementation/throttle)
 - [curry](src/javascript-implementation/curry)
