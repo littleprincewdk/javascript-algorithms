@@ -3,6 +3,13 @@
   "extends": ["airbnb-base", "prettier"],
   "plugins": ["prettier"],
   "parser": "@babel/eslint-parser",
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "globals": {
+    "AggregateError": "readonly"
+  },
   "rules": {
     "prettier/prettier": "error",
 
