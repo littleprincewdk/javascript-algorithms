@@ -25,6 +25,10 @@ $ yarn test
   - [Quick Sort](src/algorithms/sorting/quick-sort)
   - [Counting Sort](src/algorithms/sorting/counting-sort)
 
+- **Sets**
+
+  - [Shuffle](src/algorithms/sets/shuffle/)
+
 - **Tree**
 
   - [Binary Tree](src/algorithms/tree/binary-tree)
