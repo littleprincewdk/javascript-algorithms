@@ -5,7 +5,7 @@
  */
 export function clone(obj) {
   if (typeof obj !== 'object' || !obj) {
-    return {};
+    return obj;
   }
 
   const result = obj instanceof Array ? [] : {};
@@ -22,14 +22,24 @@ export function clone(obj) {
  * @param {*} obj
  * @returns {object}
  */
-export function cloneDeep(obj) {
+export function cloneDeep(obj, map = new WeakMap()) {
   if (typeof obj !== 'object' || !obj) {
-    return {};
+    return obj;
+  }
+
+  if (map.has(obj)) {
+    return map.get(obj);
   }
 
   const result = obj instanceof Array ? [] : {};
+  map.set(obj, result);
+
   Object.keys(obj).forEach((key) => {
-    result[key] = typeof obj[key] === 'object' && obj[key] ? cloneDeep(obj[key]) : obj[key];
+    if (typeof obj[key] === 'object' && obj[key]) {
+      result[key] = cloneDeep(obj[key], map);
+    } else {
+      result[key] = obj[key];
+    }
   });
 
   return result;
